@@ -1,20 +1,14 @@
 import os
-import sys
-from pathlib import Path
-
-# プロジェクトのルートディレクトリをPythonパスに追加
-project_root = str(Path(__file__).parent.parent.absolute())
-sys.path.insert(0, project_root)
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
-from lib.tools.add import add_tool
-from lib.tools.divide import divide_tool
-from lib.tools.compare_num import compare_tool
-from lib.tool_registry import ToolRegistry
-from lib.workflows.simple_flow import create_simple_workflow
-from lib.prompts.calculate import get_prompt
+from agentsarcadia.lib.tools.add import add_tool
+from agentsarcadia.lib.tools.divide import divide_tool
+from agentsarcadia.lib.tools.compare_num import compare_tool
+from agentsarcadia.lib.tool_registry import ToolRegistry
+from agentsarcadia.lib.workflows.simple_flow import create_simple_workflow
+from agentsarcadia.prompts.calculate import get_prompt
 
 # .envファイルから環境変数を読み込む
 load_dotenv()
