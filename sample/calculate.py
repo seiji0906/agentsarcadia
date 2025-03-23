@@ -3,11 +3,11 @@ import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 
-from agentsarcadia.lib.tools.add import add_tool
-from agentsarcadia.lib.tools.divide import divide_tool
-from agentsarcadia.lib.tools.compare_num import compare_tool
-from agentsarcadia.lib.tool_registry import ToolRegistry
-from agentsarcadia.lib.workflows.simple_flow import create_simple_workflow
+from agentsarcadia.tools.add import add_tool
+from agentsarcadia.tools.divide import divide_tool
+from agentsarcadia.tools.compare_num import compare_tool
+from agentsarcadia.tool_registry import ToolRegistry
+from agentsarcadia.workflows.simple_flow import create_simple_workflow
 from agentsarcadia.prompts.calculate import get_prompt
 
 # .envファイルから環境変数を読み込む

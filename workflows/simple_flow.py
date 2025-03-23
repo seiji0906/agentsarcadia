@@ -1,14 +1,14 @@
 from langgraph.graph import StateGraph, END
 from langchain_core.runnables import RunnableLambda
 
-from lib.states.base import AgentState
-from lib.nodes.start import start_node
-from lib.nodes.llm_decision import llm_decision_node
-from lib.nodes.parse_response import parse_response_node
-from lib.nodes.error import error_node
-from lib.nodes.generic_tool import create_generic_tool_node
-from lib.tool_registry import ToolRegistry
-from lib.tool_router import create_tool_router
+from ..states.base import AgentState
+from ..nodes.start import start_node
+from ..nodes.llm_decision import llm_decision_node
+from ..nodes.parse_response import parse_response_node
+from ..nodes.error import error_node
+from ..nodes.generic_tool import create_generic_tool_node
+from ..tool_registry import ToolRegistry
+from ..tool_router import create_tool_router
 
 
 def create_simple_workflow(llm, prompt, tool_registry=None):
